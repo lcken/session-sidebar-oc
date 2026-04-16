@@ -1,4 +1,4 @@
-# @opencode-ai/session-sidebar
+# @lcken/session-sidebar-oc
 
 Session sidebar plugin for OpenCode TUI. Displays a list of sessions in the sidebar with real-time status indicators.
 
@@ -25,19 +25,33 @@ Sessions
 
 ## Installation
 
-### Via Bun (Recommended)
+### Quick Install (Recommended)
 
 ```bash
-bun add @opencode-ai/session-sidebar
+bunx @lcken/session-sidebar-oc install
 ```
 
-### Via NPM
+This will automatically configure both TUI and server plugins.
+
+### Manual Install
+
+#### Via Bun
 
 ```bash
-npm install @opencode-ai/session-sidebar
+bun add @lcken/session-sidebar-oc
 ```
+
+#### Via NPM
+
+```bash
+npm install @lcken/session-sidebar-oc
+```
+
+Then configure manually (see below).
 
 ## Configuration
+
+Only needed if you installed manually.
 
 ### 1. TUI Plugin (`~/.config/opencode/tui.json`)
 
@@ -45,7 +59,7 @@ npm install @opencode-ai/session-sidebar
 {
   "plugins": {
     "session-sidebar": {
-      "source": "node_modules/@opencode-ai/session-sidebar/dist/tui.js"
+      "source": "node_modules/@lcken/session-sidebar-oc/dist/tui.js"
     }
   }
 }
@@ -57,7 +71,7 @@ npm install @opencode-ai/session-sidebar
 {
   "plugins": {
     "session-sidebar-events": {
-      "source": "node_modules/@opencode-ai/session-sidebar/dist/index.js"
+      "source": "node_modules/@lcken/session-sidebar-oc/dist/index.js"
     }
   }
 }

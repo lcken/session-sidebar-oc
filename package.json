@@ -1,11 +1,14 @@
 {
-  "name": "@opencode-ai/session-sidebar",
+  "name": "@lcken/session-sidebar-oc",
   "version": "1.0.0",
   "description": "Session sidebar plugin for OpenCode TUI - displays session list with real-time status indicators",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "session-sidebar-oc": "./dist/cli.js"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -22,28 +25,27 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "bun build ./src/index.ts ./src/tui.tsx --outdir ./dist --target bun",
-    "dev": "bun build ./src/index.ts ./src/tui.tsx --outdir ./dist --target bun --watch",
+    "build": "bun build ./src/index.ts ./src/tui.tsx ./src/cli.ts --outdir ./dist --target bun",
+    "dev": "bun build ./src/index.ts ./src/tui.tsx ./src/cli.ts --outdir ./dist --target bun --watch",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [
     "opencode",
-    "opencode-ai",
     "tui",
     "sidebar",
     "session",
     "plugin"
   ],
-  "author": "",
+  "author": "lcken",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_USERNAME/session-sidebar.git"
+    "url": "git+https://github.com/lcken/session-sidebar-oc.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/session-sidebar/issues"
+    "url": "https://github.com/lcken/session-sidebar-oc/issues"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/session-sidebar#readme",
+  "homepage": "https://github.com/lcken/session-sidebar-oc#readme",
   "peerDependencies": {
     "solid-js": "^1.8.0"
   },
