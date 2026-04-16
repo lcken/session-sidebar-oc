@@ -1,0 +1,55 @@
+{
+  "name": "@opencode-ai/session-sidebar",
+  "version": "1.0.0",
+  "description": "Session sidebar plugin for OpenCode TUI - displays session list with real-time status indicators",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./tui": {
+      "import": "./dist/tui.js",
+      "types": "./dist/tui.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bun build ./src/index.ts ./src/tui.tsx --outdir ./dist --target bun",
+    "dev": "bun build ./src/index.ts ./src/tui.tsx --outdir ./dist --target bun --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-ai",
+    "tui",
+    "sidebar",
+    "session",
+    "plugin"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/session-sidebar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/session-sidebar/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/session-sidebar#readme",
+  "peerDependencies": {
+    "solid-js": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "solid-js": "^1.8.0",
+    "typescript": "^5.0.0"
+  }
+}
